@@ -1,2 +1,2 @@
-# simplytodo
-simple to do list project
+# Responsive Menu
+A simple responsive menu

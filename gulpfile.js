@@ -27,7 +27,7 @@ gulp.task('pug', function(){
   .pipe(gulp.dest('./build'));
 });
 gulp.task('js', function(){
-  return gulp.src('js/*.js')
+  return gulp.src('js/main.js')
   .pipe(minify())
   .pipe(browserSync.reload({stream: true}))
   .pipe(gulp.dest('./build'));
