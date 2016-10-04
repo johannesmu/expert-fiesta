@@ -6,6 +6,8 @@ header {
   background-color: #333333;
   min-height: 60px;
   color: #eeeeee;
+  display: flex;
+  flex-direction: column;
 }
 .header-row {
   display: flex;
@@ -64,8 +66,11 @@ header {
   height: 4px;
   background-color: white;
   margin-top: 5px;
+  border-radius: 10%;
   width: 100%;
   transform: translateY(-100%);
+  transform-origin: 50%;
+  transition: all 0.5s;
 }
 .main-navigation {
   display: flex;
@@ -135,6 +140,15 @@ main {
     order: 1;
     display: inline-block;
   }
+  #nav-button.open .stripe:first-child {
+    transform: scaleX(1.5) translateY(220%) rotate(55deg);
+  }
+  #nav-button.open .stripe:nth-child(2) {
+    opacity: 0;
+  }
+  #nav-button.open .stripe:nth-child(3) {
+    transform: scaleX(1.5) translateY(-220%) rotate(-55deg);
+  }
   .logo {
     order: 2;
   }
@@ -150,9 +164,11 @@ main {
   }
   .nav-row {
     flex-direction: column;
+    order: 2;
   }
   .search-row {
     justify-content: flex-start;
+    order: 1;
   }
   .search-form {
     width: 100%;
